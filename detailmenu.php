@@ -8,6 +8,8 @@ require('koneksi.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product-Detailed</title>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -18,11 +20,11 @@ require('koneksi.php');
     <div class="bx bx-menu" id="menu-icon"></div>
 
     <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#services">Service</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php#about">About</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="index.php#services">Service</a></li>
+        <li><a href="index.php#contact">Contact</a></li>
     </ul>
 </header>
 
@@ -31,7 +33,7 @@ require('koneksi.php');
   	<div class="small-container single-products">
         <div class="row">
             <?php
-            
+                
                 $ambilmenu=mysqli_query($conn, "SELECT * FROM menu where id_menu='".$_GET['id']."' ");
                 
                 while($data=mysqli_fetch_array($ambilmenu)){
@@ -43,17 +45,18 @@ require('koneksi.php');
             
             <div class="col-2">
                 <p>Detail Menu</p>
-                <h1><?=$data['nama_menu'];?></h1>
-                <h4><?=$data['harga_menu'];?></h4>
+                <h1 name="namamenu"><?=$data['nama_menu'];?></h1>
+                <h4 name="harga">Rp. <?=$data['harga_menu'];?></h4>
                 <h3>Product Details <i class="fa fa-indent"></i></h3>
                 <br>
                 <p>Give your summer wardobe a style upgrade with the HRX Men's
                 Basic shirt. Team it with a pair of shorts for your morning
                 workout or denims for an evening out with the guys.</p>
                 <br>
-                <input type="number" style="height: 32px;" value="1">
-                <a href="" class="btn">Add To Cart</a>
-
+                <input type="number" name="jumlah" style="height: 32px;" value="1">
+                <button type="submit" class="border-none" name="mesen" style="background-color:#9b7a50;">
+                <a href="" class="btn">Pesen Sekarang!</a>
+                </button>
             </div>
             <?php
                 }
