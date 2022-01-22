@@ -45,62 +45,32 @@ require("server.php");
                 $gambar=$data['gambar'];
                 $id=$data['id_menu'];
             ?>
-
-                <div class="col-4">
-                    <img src="images/<?=$gambar;?>">
-                        <h4><a href="detailmenu.php"><?=$nama;?></a></h4>
-                        <p><?=$harga;?></p>
+            <div class="card mb-3 border border-dark" style="height: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="images/<?=$gambar;?>" class="img-fluid rounded-start" width="290" height="100%">
                     </div>
-                    
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <strong class="d-inline-block pb-1 text-success" style="font-family:poppins; margin-left: -120px;"><?=$nama;?></strong>
+                            <h4 class="card-title" style="font-family: poppins; font-weight:semi-bold; font-size: 35px; margin-left: -120px;"><b><?=$harga;?></b></h4>
+                            <hr style="margin-left: -98px;">
+                            <button type="button mt-1" class="btn btn-sm ml-2" style="background:#1dd1a1; margin-left: -120px;">
+                                <a class="text-decoration-none text-dark" href="detailmenu.php?id=<?=$id?>">Pinjam Buku</a>   
+                            </button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+                                               
             <?php
             }
             ?>
-             <div class="page-btn">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>&#8594;</span>
-                </div>
 
  	    </div>
-  
+    </div>
 	<!---- footer----->
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="contact-box">
-            <h3>Food Taste</h3>
-            <span>Connect With Us</span>
-            <div class="social">
-                <a href="#"><i class='bx bxl-facebook' ></i></a>
-                <a href="#"><i class='bx bxl-twitter' ></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-            </div>
-        </div>
-        <div class="contact-box">
-            <h3>Menu Links</h3>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#services">Service</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </div>
-        <div class="contact-box">
-            <h3>Quick Links</h3>
-            <li><a href="#Contact">Contact</a></li>
-            <li><a href="#Privacy Policy">Privacy Policy</a></li>
-            <li><a href="#Disclaimer">Disclaimer</a></li>
-            <li><a href="#Terms Of Use">Terms Of Use</a></li>
-        </div>
-        <div class="contact-box address">
-            <h3>Contact</h3>
-            <i class='bx bxs-map' ><span>JL. Gunung Andakasa no. 11, Denpasar Barat, Bali</span></i>
-            <i class='bx bxs-phone' ><span>+62 87761490509</span></i>
-            <i class='bx bxs-envelope' ><span>ayulia1030@email.com</span></i>
-        </div>
-    </section>
 
     <!-- Copyright -->
     <div class="copyright">

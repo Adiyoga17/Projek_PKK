@@ -22,7 +22,7 @@
         <ul class="navbar">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
+            <li><a href="menu.php">Menu</a></li>
             <li><a href="#services">Service</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -52,45 +52,6 @@
         </div>
     </section>
 
-    <!-- Menu -->
-    <section class="menu" id="menu">
-        <div class="heading">
-            <span>Menu</span>
-            <h2>Tasty menu of the week</h2>
-        </div>
-        <div class="menu-container">
-            <!-- Box 1 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="images/3.png" alt="">
-                </div>
-                <h2>Paket A</h2>
-                <h3>Tasty Food</h3>
-                <span>Rp. 10.000</span>
-                <i class='bx bx-cart-alt'></i>
-            </div>
-            <!-- Box 2 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="images/3.png" alt="">
-                </div>
-                <h2>Paket B</h2>
-                <h3>Tasty Food</h3>
-                <span>Rp. 10.000</span>
-                <i class='bx bx-cart-alt'></i>
-            </div>
-            <!-- Box 3 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="images/3.png" alt="">
-                </div>
-                <h2>Paket C</h2>
-                <h3>Tasty Food</h3>
-                <span>Rp. 10.000</span>
-                <i class='bx bx-cart-alt'></i>
-            </div>
-        </div>
-    </section>
 
     <!-- Service -->
     <section class="services" id="services">

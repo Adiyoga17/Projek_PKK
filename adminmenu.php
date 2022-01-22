@@ -30,13 +30,17 @@ require('server.php');
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <a class="nav-link" href="adminuser.php">
+                        <a class="nav-link" href="admin.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                             User
                         </a>
                         <a class="nav-link" href="adminmenu.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
                             Menu
+                        </a>
+                        <a class="nav-link" href="adminjual.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
+                            Penjualan
                         </a>
                         <a class="nav-link" href="login.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>

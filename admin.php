@@ -34,6 +34,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
                             Menu
                         </a>
+                        <a class="nav-link" href="adminjual.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                            Penjualan
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -62,6 +66,8 @@
                                             <th>NO</th>
                                             <th>Nama</th>
                                             <th>Password</th>
+                                            <th>Alamat</th>
+                                            <th>Telepon</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -93,7 +99,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Tambah Petugas</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah User</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -107,7 +113,6 @@
                                     <p style="margin-bottom:5px; margin-top:15px;"><b>Password</b></p>
                                     <input type="pass" class="form-control" name="password" required autocomplete="off">
 
-                                    <p style="margin-bottom:5px; margin-top:15px;"><b>Sebagai</b></p>
                                     <input type="text" class="form-control" name="role"
                                         Value="Petugas" required> <br>
                                     <button type="submit" class="btn btn-primary" name="addpetugas">Submit</button>

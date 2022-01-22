@@ -1,3 +1,6 @@
+<?php
+require('koneksi.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,31 +30,34 @@
 
   	<div class="small-container single-products">
         <div class="row">
-            <div class="col-2">
-                <img src="images/4.png" width="100%" id="product-img">
+            <?php
+            
+                $ambilmenu=mysqli_query($conn, "SELECT * FROM menu where id_menu='".$_GET['id']."' ");
+                
+                while($data=mysqli_fetch_array($ambilmenu)){
 
+            ?>
+            <div class="col-2">
+                <img src="images/<?=$data['gambar'];?>" width="100%" id="product-img">
             </div>
+            
             <div class="col-2">
-                <p>Home / shirt</p>
-                <h1>Basic shirt By Binco</h1>
-                <h4>Rp.100.000</h4>
-                <select>
-                    <option>Select Size</option>
-                    <option>XXL</option>
-                    <option>XL</option>
-                    <option>Large</option>
-                    <option>Medium</option>
-                    <option>Small</option>
-                </select>
-                <input type="number" style="height: 32px;" value="1">
-                <a href="" class="btn">Add To Cart</a>
-
+                <p>Detail Menu</p>
+                <h1><?=$data['nama_menu'];?></h1>
+                <h4><?=$data['harga_menu'];?></h4>
                 <h3>Product Details <i class="fa fa-indent"></i></h3>
                 <br>
                 <p>Give your summer wardobe a style upgrade with the HRX Men's
                 Basic shirt. Team it with a pair of shorts for your morning
                 workout or denims for an evening out with the guys.</p>
+                <br>
+                <input type="number" style="height: 32px;" value="1">
+                <a href="" class="btn">Add To Cart</a>
+
             </div>
+            <?php
+                }
+            ?>
         </div>
     </div>
 
