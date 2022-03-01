@@ -75,6 +75,7 @@ require('server.php');
                                             <th>NO</th>
                                             <th>Nama Menu</th>
                                             <th>Harga Menu</th>
+                                            <th>Kategori</th>
                                             <th>Gambar</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -95,6 +96,7 @@ require('server.php');
                                     while($data=mysqli_fetch_array($ambilmenu)){
                                         $nama=$data['nama_menu'];
                                         $harga=$data['harga_menu'];
+                                        $kategori=$data['kategori'];
                                         $gambar=$data['gambar'];
                                         $id=$data['id_menu'];
 
@@ -104,6 +106,7 @@ require('server.php');
                                             <td><?=$i++;?></td>
                                             <td><?=$nama;?></td>
                                             <td><?=$harga;?></td>
+                                            <td><?=$kategori?></td>
                                             <td><img src="images/<?=$gambar;?>" style="width:160px; height:160px;"></td>
                                             <td>
                                                 <button type="button" class="btn btn-info" data-toggle="modal"
@@ -140,6 +143,10 @@ require('server.php');
                                                                 <p style="margin-bottom:5px; margin-top:15px;"><b>Harga Menu</b></p>
                                                                 <input type="text" class="form-control"
                                                                     name="hargamenu" value="<?=$harga;?>" required> 
+
+                                                                    <p style="margin-bottom:5px; margin-top:15px;"><b>Kategori</b></p>
+                                                                <input type="text" class="form-control"
+                                                                    name="kategori" value="<?=$kategori;?>" required> 
 
                                                                 <p style="margin-bottom:5px; margin-top:15px;"><b>Gambar</b></p>
                                                                 <img src="img/<?=$gambar;?>" style="width:100px; height:100px;"> 
@@ -224,6 +231,9 @@ require('server.php');
 
                                     <p style="margin-bottom:5px; margin-top:15px;"><b>Harga Menu</b></p>
                                     <input type="text" class="form-control" name="harga" required autocomplete="off">
+
+                                    <p style="margin-bottom:5px; margin-top:15px;"><b>Kategori</b></p>
+                                    <input type="text" class="form-control" name="kate" required autocomplete="off">
 
                                     <p style="margin-bottom:5px; margin-top:15px;"><b>Gambar</b></p>
                                     <input type="file" name="gambar"> <br> <br>

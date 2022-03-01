@@ -52,7 +52,7 @@ require("server.php");
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <tbody>
                                 <?php
-                                    $ambilmenu=mysqli_query($conn, "SELECT * FROM menu where kategori='Makanan'");
+                                    $ambilmenu=mysqli_query($conn, "SELECT * FROM menu where kategori='Minuman'");
 
                                     //caru data
                                     if(isset($_POST['cari'])){

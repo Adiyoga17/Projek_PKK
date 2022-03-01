@@ -45,18 +45,17 @@ require('koneksi.php');
             
             <div class="col-2">
                 <p>Detail Menu</p>
-                <h1 name="namamenu"><?=$data['nama_menu'];?></h1>
-                <h4 name="harga">Rp. <?=$data['harga_menu'];?></h4>
+                <h1> <?=$data['nama_menu'];?></h1>
+                <h4>Rp. <?=$data['harga_menu'];?></h4>
                 <h3>Product Details <i class="fa fa-indent"></i></h3>
                 <br>
                 <p>Give your summer wardobe a style upgrade with the HRX Men's
                 Basic shirt. Team it with a pair of shorts for your morning
                 workout or denims for an evening out with the guys.</p>
                 <br>
-                <input type="number" name="jumlah" style="height: 32px;" value="1">
-                <button type="submit" class="border-none" name="mesen" style="background-color:#9b7a50;">
-                <a href="" class="btn">Pesen Sekarang!</a>
-                </button>
+               
+                <a href="cekout.php" class="btn">Pesen Sekarang!</a>
+               
             </div>
             <?php
                 }

@@ -7,6 +7,7 @@ include("koneksi.php");
 if(isset($_POST['addmenu'])){
     $nama=$_POST['nama'];
     $harga=$_POST['harga'];
+    $kate=$_POST['kate'];
     $gambar=$_POST['gambar'];
 
     //upload gambar dulu
@@ -15,8 +16,8 @@ if(isset($_POST['addmenu'])){
         return false;
     }
 
-    $addmenu=mysqli_query($conn,"INSERT INTO menu (nama_menu, harga_menu, gambar) 
-                            VALUE ('$nama','$harga','$gambar')");
+    $addmenu=mysqli_query($conn,"INSERT INTO menu (nama_menu, harga_menu,kategori, gambar) 
+                            VALUE ('$nama','$harga','$kate','$gambar')");
 
     if($addmenu){
         echo "<script>alert('Menu Berhasil Di Tambah');document.location='adminmenu.php'</script>";
@@ -67,6 +68,7 @@ if(isset($_POST['editmenu'])){
     $id=$_POST['id'];
     $nama_menu=$_POST['namamenu'];
     $harga_menu=$_POST['hargamenu'];
+    $kate=$_POST['kategori'];
     $gambarlama=$_POST['gambarlama'];
 
     //cek apakah user plih gambar baru apa tidak
@@ -76,7 +78,7 @@ if(isset($_POST['editmenu'])){
         $gambar=upload();
     }
 
-    $updatemenu=mysqli_query($conn,"UPDATE menu set nama_menu='$nama_menu', harga_menu='$harga_menu', gambar='$gambar' where id_menu='$id'");
+    $updatemenu=mysqli_query($conn,"UPDATE menu set nama_menu='$nama_menu', harga_menu='$harga_menu', kategori='$kate', gambar='$gambar' where id_menu='$id'");
     
     if($updatemenu){
         echo "<script>alert('Menu Berhasil Di Update');document.location='adminmenu.php'</script>";
@@ -100,5 +102,6 @@ if(isset($_POST['hapusmenu'])){
 
 //===================================================================PESANAN======================================================================
 //menambahkan Pesanan
+
 
 ?>
