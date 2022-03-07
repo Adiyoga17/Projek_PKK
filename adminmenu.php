@@ -30,21 +30,9 @@ require('server.php');
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <a class="nav-link" href="admin.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                            User
-                        </a>
                         <a class="nav-link" href="adminmenu.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
                             Menu
-                        </a>
-                        <a class="nav-link" href="adminjual.php">
-                        <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
-                            Penjualan
-                        </a>
-                        <a class="nav-link" href="login.php">
-                        <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
-                            Logout
                         </a>
                     </div>
                 </div>
@@ -76,6 +64,8 @@ require('server.php');
                                             <th>Nama Menu</th>
                                             <th>Harga Menu</th>
                                             <th>Kategori</th>
+                                            <th>Ukuran</th>
+                                            <th>Details</th>
                                             <th>Gambar</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -85,18 +75,13 @@ require('server.php');
                                     <?php
                                     $ambilmenu=mysqli_query($conn, "SELECT * FROM menu ");
 
-                                    //cari data
-                                    if(isset($_POST['cari'])){
-                                        $ambilmenu=cari($_POST['keyword']);
-                                    }else{
-                                        $ambilmenu=mysqli_query($conn, "SELECT * FROM menu");
-                                    }
-
                                     $i=1;
                                     while($data=mysqli_fetch_array($ambilmenu)){
                                         $nama=$data['nama_menu'];
                                         $harga=$data['harga_menu'];
                                         $kategori=$data['kategori'];
+                                        $ukuran=$data['ukuran'];
+                                        $deskripsi=$data['deskripsi'];
                                         $gambar=$data['gambar'];
                                         $id=$data['id_menu'];
 
@@ -104,9 +89,11 @@ require('server.php');
 
                                         <tr>
                                             <td><?=$i++;?></td>
-                                            <td><?=$nama;?></td>
-                                            <td><?=$harga;?></td>
+                                            <td style="width:150px;"><?=$nama;?></td>
+                                            <td style="width:50px;"><?=$harga;?></td>
                                             <td><?=$kategori?></td>
+                                            <td><?=$ukuran?></td>
+                                            <td style="width:300px;"><?=$deskripsi?></td>
                                             <td><img src="images/<?=$gambar;?>" style="width:160px; height:160px;"></td>
                                             <td>
                                                 <button type="button" class="btn btn-info" data-toggle="modal"
@@ -147,6 +134,14 @@ require('server.php');
                                                                     <p style="margin-bottom:5px; margin-top:15px;"><b>Kategori</b></p>
                                                                 <input type="text" class="form-control"
                                                                     name="kategori" value="<?=$kategori;?>" required> 
+
+                                                                <p style="margin-bottom:5px; margin-top:15px;"><b>Ukuran</b></p>
+                                                                <input type="text" class="form-control"
+                                                                    name="ukuran" value="<?=$ukuran;?>" required> 
+
+                                                                <p style="margin-bottom:5px; margin-top:15px;"><b>Detail</b></p>
+                                                                <textarea type="text" class="form-control"
+                                                                    name="details" required><?=$deskripsi;?></textarea>
 
                                                                 <p style="margin-bottom:5px; margin-top:15px;"><b>Gambar</b></p>
                                                                 <img src="img/<?=$gambar;?>" style="width:100px; height:100px;"> 
@@ -234,6 +229,13 @@ require('server.php');
 
                                     <p style="margin-bottom:5px; margin-top:15px;"><b>Kategori</b></p>
                                     <input type="text" class="form-control" name="kate" required autocomplete="off">
+
+                                    <p style="margin-bottom:5px; margin-top:15px;"><b>Ukuran</b></p>
+                                    <input type="text" class="form-control" name="size" required autocomplete="off">
+
+                                    <p style="margin-bottom:5px; margin-top:15px;"><b>Details</b></p>
+                                    <textarea type="text" class="form-control mb-3" id="exampleFormControlTextarea1" rows="3"
+                                        name="detail" required autocomplete="off"></textarea> 
 
                                     <p style="margin-bottom:5px; margin-top:15px;"><b>Gambar</b></p>
                                     <input type="file" name="gambar"> <br> <br>

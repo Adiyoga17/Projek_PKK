@@ -51,22 +51,9 @@ header {
   padding: 18px 100px;
   box-shadow: 0 0.5rem 50rem rgba(0, 0, 0, 0.1);
 }
-.logo {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--main-color);
-}
-.navbar {
-  display: flex;
-}
-.navbar a {
-  font-size: 1rem;
-  padding: 10px 20px;
-  color: var(--text-color);
-  font-weight: 500;
-}
+
 .navbar a:hover {
-  color: var(--main-color);
+  color: #9b7a50;
 }
 #menu-icon {
   font-size: 2rem;

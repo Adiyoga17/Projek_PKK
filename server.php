@@ -2,12 +2,20 @@
 
 include("koneksi.php");
 
+//menambah rupiah
+function tambahrp($angka){
+    $rupiah ='Rp. '.number_format($angka,0,',','.');
+    return $rupiah;
+}
+
 //============================================================MENU===============================================================================
 //tambah menu
 if(isset($_POST['addmenu'])){
     $nama=$_POST['nama'];
     $harga=$_POST['harga'];
     $kate=$_POST['kate'];
+    $size=$_POST['size'];
+    $detail=$_POST['detail'];
     $gambar=$_POST['gambar'];
 
     //upload gambar dulu
@@ -16,8 +24,8 @@ if(isset($_POST['addmenu'])){
         return false;
     }
 
-    $addmenu=mysqli_query($conn,"INSERT INTO menu (nama_menu, harga_menu,kategori, gambar) 
-                            VALUE ('$nama','$harga','$kate','$gambar')");
+    $addmenu=mysqli_query($conn,"INSERT INTO menu (nama_menu, harga_menu, kategori, ukuran, deskripsi , gambar) 
+                            VALUE ('$nama','$harga','$kate','$size','$detail','$gambar')");
 
     if($addmenu){
         echo "<script>alert('Menu Berhasil Di Tambah');document.location='adminmenu.php'</script>";
@@ -69,6 +77,8 @@ if(isset($_POST['editmenu'])){
     $nama_menu=$_POST['namamenu'];
     $harga_menu=$_POST['hargamenu'];
     $kate=$_POST['kategori'];
+    $ukuran=$_POST['ukuran'];
+    $details=$_POST['details'];
     $gambarlama=$_POST['gambarlama'];
 
     //cek apakah user plih gambar baru apa tidak
@@ -78,7 +88,7 @@ if(isset($_POST['editmenu'])){
         $gambar=upload();
     }
 
-    $updatemenu=mysqli_query($conn,"UPDATE menu set nama_menu='$nama_menu', harga_menu='$harga_menu', kategori='$kate', gambar='$gambar' where id_menu='$id'");
+    $updatemenu=mysqli_query($conn,"UPDATE menu set nama_menu='$nama_menu', harga_menu='$harga_menu', kategori='$kate', ukuran='$ukuran' , deskripsi='$details' , gambar='$gambar' where id_menu='$id'");
     
     if($updatemenu){
         echo "<script>alert('Menu Berhasil Di Update');document.location='adminmenu.php'</script>";
@@ -100,8 +110,6 @@ if(isset($_POST['hapusmenu'])){
     }
 }
 
-//===================================================================PESANAN======================================================================
-//menambahkan Pesanan
 
 
 ?>
