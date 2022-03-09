@@ -1,0 +1,4 @@
+Panduan Mengguna Web Kami:
+1). Buat database dengan nama yang sama seperti milik kamu (tugas_ppk)
+2). Jika sudah membuat database, silakan import data kami ke dalam database yang sudah anda buat.
+3). jika sudah, web kami bisa digunakan atau di test
