@@ -87,7 +87,7 @@ require('server.php');
         <div class="contact-box">
             <h3>Sosmed</h3>
             <div class="social">
-                <a class="text-dark" href="#"><i class="fab fa-instagram"> Instagram</i></a>
+                <a class="text-dark" href="https://instagram.com/dapur_ibuayulia?utm_medium=copy_link"><i class="fab fa-instagram"> Instagram</i></a>
             </div>
         </div>
         <div class="contact-box">
