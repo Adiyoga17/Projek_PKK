@@ -69,11 +69,9 @@ require('server.php');
                         <h5 class="card-title" style="font-size: 40px;"><?=$data['nama_menu']?></h5>
                         <p class="card-text" style="font-size: 25px;">Ukuran: <?=$data['ukuran']?></p>
                         <p class="card-text" style="font-size: 2em;">Harga: <?=tambahrp($data['harga_menu'])?></p>
-                        <h4>Details </h4>
+                        <h4 class="mb-3">Details </h4>
                         <p><?=$data['deskripsi']?></p>
-                        <br>
-
-                        <a href="https://api.whatsapp.com/send?phone=+6287761490509 &text= Hello Kak, saya ingin pesan <?=$data['nama_menu'];?> yang berukuran  <?=$data['ukuran']?>." class="btn">Pesen Sekarang!</a>
+                        <a href="https://api.whatsapp.com/send?phone=+6287761490509 &text= Hello Kak, saya ingin pesan <?=$data['nama_menu'];?> yang berukuran  <?=$data['ukuran']?>." class="btn" target="_black">Pesen Sekarang!</a>
                     </div>
                 </div>
             </div>

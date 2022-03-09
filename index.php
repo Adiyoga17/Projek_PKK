@@ -55,21 +55,22 @@
             <a href="menu.php" class="btn">View Menu</a>
         </div>
         <div class="home-img">
-            <img src="images/3.png" alt="">
+            <img src="images/foto1.png" alt="">
         </div>
     </section>
 
     <!-- About -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="images/4.png" alt="">
+            <img src="images/toko.jpg" >
         </div>
         <div class="about-text">
             <span>About Us</span>
-            <h2>We make good and <br> tasty food</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quo iure rem ducimus tenetur deserunt
-                commodi doloribus, quibusdam vel fuga?</p>
-            <a href="#" class="btn">Lear More</a>
+            <h2>Dapur Ayulia dengan aneka <br> ragam makanan bali</h2>
+            <p>Masih bingung nyari tempat makan bali mewah tapi pengennya murah meriah?
+                Disini nih tempatnya di Dapur Ibu Ayulia. tempat makanan 
+                tradisional bali murah meriah. Yuk tunggu apa 
+                lagi mampir kesini dan cobaiin makanannya.</p>
         </div>
     </section>
 
@@ -78,7 +79,7 @@
     <section class="services" id="services">
         <div class="heading">
             <span>Services</span>
-            <h2>We provide best food services</h2>
+            <h2>Kami menyediakan layanan makanan terbaik</h2>
         </div>
 
         <div class="servives-container">
@@ -86,22 +87,19 @@
             <div class="s-box">
                 <img src="images/order.png" alt="">
                 <h3>Di Pesan</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit ea fugiat esse tempore ipsum
-                    temporibus.</p>
+                <p>Kami melayani pesanan via online dan offline. Via online kami menggunakan aplikasi WhatsApp, Gojek dan Grab</p>
             </div>
             <!-- Box 2 -->
             <div class="s-box">
-                <img src="images/delivery-truck.png" alt="">
-                <h3>Di Antar</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit ea fugiat esse tempore ipsum
-                    temporibus.</p>
+                <img src="images/receipt.png" alt="">
+                <h3>Bayar</h3>
+                <p>Kami melakukan pembayaran menggunakan transfer BCA/BNI/QRIS</p>
             </div>
             <!-- Box 3 -->
             <div class="s-box">
-                <img src="images/shipping.png" alt="">
-                <h3>Sampe Di tujuan</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit ea fugiat esse tempore ipsum
-                    temporibus.</p>
+                <img src="images/delivery-truck.png" alt="">
+                <h3>Di Antar</h3>
+                <p>Kami melayani pengantaran bisa melalui go-food dan grab-food dan bisa juga take away</p>
             </div>
         </div>
     </section>
@@ -119,7 +117,7 @@
         <div class="contact-box">
             <h3>Sosmed</h3>
             <div class="social">
-                <a class="text-dark" href="#"><i class="fab fa-instagram"> Instagram</i></a>
+                <a class="text-dark" href="https://instagram.com/dapur_ibuayulia?utm_medium=copy_link"><i class="fab fa-instagram"> Instagram</i></a>
             </div>
         </div>
         <div class="contact-box">
